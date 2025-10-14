@@ -99,6 +99,37 @@ eval duration:        1.769526142s
 eval rate:            47.47 tokens/s
 ```
 
+Another example.
+
+![](data/fotothek.slub-dresden.de/fotos/tu/kg/0193000/tu_kg_0193532.jpg)
+
+```
+$ OLLAMA_HOST=http://k9:11434 ollama run --verbose qwen2.5vl:latest 'you are
+librarian and you will briefly describe this photo, caption and tags:
+./data/fotothek.slub-dresden.de/fotos/tu/kg/0193000/tu_kg_0193532.jpg -- follow
+a strict structure of the output: at most two sentence summary then one newline
+than up to 5 tags that can come from bibliographic rule system, or can be
+folksonomy style tags; do not repeat any tag'
+
+Added image './data/fotothek.slub-dresden.de/fotos/tu/kg/0193000/tu_kg_0193532.jpg'
+
+A serene garden scene featuring a statue of a man holding a snake, surrounded
+by blooming flowers and lush greenery. In the background, another statue and a
+person walking can be seen.
+
+garden statue, sculpture, floral garden, nature, outdoor scene
+
+total duration:       1m44.701742558s
+load duration:        1m40.330187047s
+prompt eval count:    1321 token(s)
+prompt eval duration: 3.241373439s
+prompt eval rate:     407.54 tokens/s
+eval count:           53 token(s)
+eval duration:        1.117964982s
+eval rate:            47.41 tokens/s
+```
+
+
 
 ### Tag accuracy
 
