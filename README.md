@@ -251,7 +251,6 @@ eval rate:            46.52 tokens/s
 ```
 
 
-
 ### Tag accuracy
 
 The tags are free form, but they could be mapped to some more formal system. An
@@ -259,17 +258,6 @@ automatic system cannot research, where a photo was take, its provenience, and
 all the tiny details that require an agent in the world.
 
 * [Einführung in Erschließung und Metadaten](https://www.germanistik.uni-wuerzburg.de/fileadmin/_migrated/content_uploads/Skript-Erschliessung_und_Metadaten.pdf)
-
-## I2MD (image to metadata)
-
-Task: Take an image of the first pages of a book, structure the data, create structured metadata for human review.
-
-* [ ] create evaluation set (image, metadata) pairs, maybe 1000 books, across the year (new books will have metadata supplied)
-* [ ] evaluate off the shelf model
-* [ ] try to tweak the prompt
-* [ ] use a lora vision to text tuned model
-* [ ] run evaluations again
-
 
 ### Summary
 
@@ -290,6 +278,28 @@ may exhibit a broad, but limited number of personas, that are repeatedly seen
 in painting. It also may be that we already have all the metadata we need, it
 is just not that we have a search query that says, please return all pictures
 of Franciscus, etc.
+
+What would be a good result? How would we evaluate that? Would we need human
+labelled images? Are there human labelled images to train. Like in art history
+books, where the first part of an essay on an image is an actual description of
+an image? Las Meninas, Foucault.
+
+> Die Meninas sind das sichtbare Bild des unsichtbaren Denkens von Velasquez. -- [
+
+
+
+
+## I2MD (image to metadata)
+
+Task: Take an image of the first pages of a book, structure the data, create structured metadata for human review.
+
+* [ ] create evaluation set (image, metadata) pairs, maybe 1000 books, across the year (new books will have metadata supplied)
+* [ ] evaluate off the shelf model
+* [ ] try to tweak the prompt
+* [ ] use a lora vision to text tuned model
+* [ ] run evaluations again
+
+
 
 ## ArticleSegmentation (AS)
 
