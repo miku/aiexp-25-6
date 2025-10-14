@@ -1,2 +1,8 @@
-# aiexp-25-6
-AI exploration 6
+# AI exploration 6
+
+> 2025-10-14
+
+## OCR
+
+
+
