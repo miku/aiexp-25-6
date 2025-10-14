@@ -22,14 +22,15 @@ be folksonomy style tags; do not repeat any tag'
 
 Added image './data/fotothek.slub-dresden.de/fotos/aes/wat/0000000/aes_wat_0000319.jpg'
 
-This black and white photograph captures the intricate patterns of sand dunes, showcasing the natural textures and forms created by wind and water erosion. The image highlights the dynamic and ever-changing nature of desert
-landscapes.
+This black and white photograph captures the intricate patterns of sand dunes,
+showcasing the natural textures and forms created by wind and water erosion.
+The image highlights the dynamic and ever-changing nature of desert landscapes.
 
 sand dunes, erosion, desert, black and white, natural textures
 
 ```
 
-Another example, running on an N150.
+Another example, running on an N150, taking 1m12s; 45KB file.
 
 ![](data/fotothek.slub-dresden.de/fotos/fg/sta/1041000/fg_sta_1041134.jpg)
 
@@ -44,9 +45,11 @@ be folksonomy style tags; do not repeat any tag'
 
 Added image './data/fotothek.slub-dresden.de/fotos/fg/sta/1041000/fg_sta_1041134.jpg'
 
-A large group of people in white uniforms marching in a parade, with a historic building and tower in the background.
+A large group of people in white uniforms marching in a parade, with a historic
+building and tower in the background.
 
-parade, uniformed marchers, historic architecture, public event, historical photo
+parade, uniformed marchers, historic architecture, public event, historical
+photo
 
 total duration:       1m12.21731794s
 load duration:        377.119938ms
