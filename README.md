@@ -67,6 +67,39 @@ eval duration:        9.096797295s
 eval rate:            4.51 tokens/s
 ```
 
+Another, running on a GPU in less than 5 seconds.
+
+![](data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0442000/df_hauptkatalog_0442205.jpg)
+
+```
+$ OLLAMA_HOST=http://k9:11434 ollama run --verbose qwen2.5vl:latest 'you are
+librarian and you will briefly describe this photo, caption and tags:
+./data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0442000/df_hauptkatalog_0442205.jpg
+-- follow a strict structure of the output: at most two sentence summary then
+one newline than up to 5 tags that can come from bibliographic rule system, or
+can be folksonomy style tags; do not repeat any tag'
+
+Added image './data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0442000/df_hauptkatalog_0442205.jpg'
+
+This black and white photograph depicts a large, multi-story building with a
+distinctive architectural style, featuring a prominent gabled roof and
+decorative elements on the facade. The building is situated on a street with a
+sidewalk and a road in the foreground, surrounded by trees and a fence. The
+image appears to be historical, possibly from the early to mid-20th century.
+
+building, architecture, historical, street, urban
+
+total duration:       56.005246954s
+load duration:        51.013481731s
+prompt eval count:    1321 token(s)
+prompt eval duration: 3.21187807s
+prompt eval rate:     411.29 tokens/s
+eval count:           84 token(s)
+eval duration:        1.769526142s
+eval rate:            47.47 tokens/s
+```
+
+
 ### Tag accuracy
 
 The tags are free form, but they could be mapped to some more formal system. An
