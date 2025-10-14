@@ -129,6 +129,42 @@ eval duration:        1.117964982s
 eval rate:            47.41 tokens/s
 ```
 
+Christianity.
+
+![](data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0121000/df_hauptkatalog_0121110.jpg)
+
+```
+$ OLLAMA_HOST=http://k9:11434 ollama run --verbose qwen2.5vl:latest 'you are
+librarian and you will briefly describe this photo, caption and tags:
+./data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0121000/df_hauptkatalog_0121110.jpg
+-- follow a strict structure of the output: at most two sentence summary then
+one newline than up to 5 tags that can come from bibliographic rule system, or
+can be folksonomy style tags; do not repeat any tag; if the image depicts a
+christian motiv, try to take your time and identify individuals in the image,
+or estimate their age, determine if it is a woman, man or child, and what
+expression can be seen in their posture or faces'
+
+Added image './data/fotothek.slub-dresden.de/fotos/df/hauptkatalog/0121000/df_hauptkatalog_0121110.jpg'
+
+This painting depicts the scene of the Lamentation of Christ, with figures
+mourning the crucified Christ. The central figure, Jesus, is shown lying on a
+stone, surrounded by mourners, including women and men, who display expressions
+of grief and sorrow. The painting is rendered in a dark, somber palette,
+emphasizing the solemnity of the moment.
+
+tags: Christian art, Lamentation of Christ, Renaissance art, religious
+painting, mourning figures
+
+total duration:       42.293783787s
+load duration:        36.901590794s
+prompt eval count:    1410 token(s)
+prompt eval duration: 3.42005799s
+prompt eval rate:     412.27 tokens/s
+eval count:           92 token(s)
+eval duration:        1.961224296s
+eval rate:            46.91 tokens/s
+```
+
 
 
 ### Tag accuracy
@@ -148,6 +184,27 @@ Task: Take an image of the first pages of a book, structure the data, create str
 * [ ] try to tweak the prompt
 * [ ] use a lora vision to text tuned model
 * [ ] run evaluations again
+
+
+### Summary
+
+The captioning can add another layer for search, that can be accessed by a
+semantic search layer that can exploit similarity from query and captioning
+document.
+
+One essential drawback is the models dependence on pixels. It is hard to
+imagine a model, given a picture, could on its own research to access the right
+data or ask the right questions.
+
+It is bound by the data, here: an image. While it may help to improve search
+for sitations, "a women pilot standing on an airfield", it is debatable if an
+increase in recall is accompanied by a less valuable decrease in precision.
+
+There are some stranger queries that may be useful. Depictions of christianity
+may exhibit a broad, but limited number of personas, that are repeatedly seen
+in painting. It also may be that we already have all the metadata we need, it
+is just not that we have a search query that says, please return all pictures
+of Franciscus, etc.
 
 ## ArticleSegmentation (AS)
 
