@@ -165,6 +165,91 @@ eval duration:        1.961224296s
 eval rate:            46.91 tokens/s
 ```
 
+Plain text, with a slightly off prompt.
+
+![](data/fotothek.slub-dresden.de/fotos/df/kz/0240000/df_kz_0240022.jpg)
+
+```
+$ OLLAMA_HOST=http://k9:11434 ollama run --verbose qwen2.5vl:latest 'you are
+librarian and you will briefly describe this photo, caption and tags:
+./data/fotothek.slub-dresden.de/fotos/df/kz/0240000/df_kz_0240022.jpg -- follow
+a strict structure of the output: at most two sentence summary then one newline
+than up to 5 tags that can come from bibliographic rule system, or can be
+folksonomy style tags; do not repeat any tag; if the image contains text,
+extract the text'
+
+Added image
+'./data/fotothek.slub-dresden.de/fotos/df/kz/0240000/df_kz_0240022.jpg'
+
+The image shows an open book with German text on the pages. The text appears to
+be a narrative or descriptive passage, possibly from a literary work or a
+historical document. The page numbers and some annotations are visible at the
+bottom of the pages.
+
+Tags: German text, book, narrative, literary work, historical document
+
+total duration:       45.131263939s
+load duration:        40.65036728s
+prompt eval count:    1319 token(s)
+prompt eval duration: 3.119131295s
+prompt eval rate:     422.87 tokens/s
+eval count:           64 token(s)
+eval duration:        1.358618034s
+eval rate:            47.11 tokens/s
+```
+
+More ocr prompt.
+
+```
+$ OLLAMA_HOST=http://k9:11434 ollama run --verbose qwen2.5vl:latest 'extract
+all text: ./data/fotothek.slub-dresden.de/fotos/df/kz/0240000/df_kz_0240022.jpg
+if the image contains text, extract the text'
+
+Added image './data/fotothek.slub-dresden.de/fotos/df/kz/0240000/df_kz_0240022.jpg'
+
+The text in the image is as follows:
+
+die Dauer allerlei Schränges, ja, Halluzinatorisches ein, wenn genügend lange
+nach oben gestarrt worden ist auf die in der Mehrzahl apfelrainenfarbenen,
+omenertbräunen, menstruationaroten Flecken gern unterschiedlicher Form und
+Größe, und mit dem dritten Auge durch die Decke hinduroh und von unten in Frau
+Fettkenheuer hinein, die mit großem Genuss da oben ihre extravagante Wäsche
+aufhängt, und mit dem dritten Auge Frau Fettkenheuer durch die Dachluke hinaus
+zum Horizont und zu den berühmten Fischerkietzkisten hinüber.****// Automatisch
+korrigiert nur auf ergrößerte Gedanken: Oij, die plötzlich so toten Telefone,
+aus denen lange noch ein ferner und bräunlich schillernden hexischen Augen Frau
+Fettkenheuers durch die Dachluke hinaus zum Horizont und zu den berühmten
+Fischerkietzkisten hinüber,****// Automatisch korrigiert nur auf ergrößerte
+Gedanken: Oij, und die bedeutsam (bedrohlich) schweigende Hörnuscheil von 26.
+8. 1977 im öffentlichen Fernsprechhüschen unter dem U-Bahnhof Dimitroffstraße
+   neben der Würstchenbude (jetziger Besitzer: W. Ziervogel 112 Berlin), diese
+endlich einmal gründlicher betrachtete Hörnuscheil, die gestillt blieb, die
+schwieg, und nicht nur aus blanker Verlegenheit ob ihrer geistlichen Leere -
+was ist es nur, was wir dann trotzdem hören? denn irgend etwas von nicht
+geringer Bedeutung, sagt uns unser mystagogischer in-nerer Schweinehund - wie
+kommt solch blut- und jauhebefleckter Nazi-begriff in diese Prosa? per
+Vermittlung durch unser rankes und schlankes sozusagen "progressives"
+Erziehungswesen? - irgendeinwas teilt uns uns auch und vor allen das Telefon
+mit, das keine Antwort mehr gibt, keine, keine, keine. Haupts uns uns die
+Wohnung der Postesssa (Sarah Kirsch) im siebenten Stockwerkwerk der entleerten
+Wohnung der Postesssa (Sarah Kirsch) im siebenten Stockwerkwerk genau, so fuhr
+auf der Fischerinsel, und die beim U-B, leider besser: Wem-Zug,
+übriggebliebenen sieben Kisten, irritierend versehen mit kyrillischen
+Aufschriften: COOP undsoweter; und wie man per Fahrstuhl sinnoislich hoffend
+'raufgefahren war - ja, siebenten Stockwerke genau -, so fuhr man per Fahrstuhl
+schwachszinnig kichernd wieder 'runter zu den öl- und bensindurotrinkten
+Schwänen der Spree, um plötzlich bei der Vor-
+
+total duration:       28.537197838s
+load duration:        10.245812428s
+prompt eval count:    1261 token(s)
+prompt eval duration: 3.088730445s
+prompt eval rate:     408.26 tokens/s
+eval count:           707 token(s)
+eval duration:        15.198169622s
+eval rate:            46.52 tokens/s
+```
+
 
 
 ### Tag accuracy
