@@ -2,6 +2,12 @@
 
 > 2025-10-14
 
+## Overview
+
+* OCR-DFDD
+* I2MD
+
+
 ## OCR-DFDD
 
 Example on 250000 photos from Deutsche Fotothek (SLUB Dresden).
@@ -79,4 +85,13 @@ Task: Take an image of the first pages of a book, structure the data, create str
 * [ ] use a lora vision to text tuned model
 * [ ] run evaluations again
 
+## ArticleSegmentation (AS)
+
+Some conference proceeding contain multiple article per PDF. Try to find
+accurate boundaries. Also often in review collections (multiple per page).
+
+## SciDocClass (scientific document classification)
+
+Is this document scientificly relevant? Given a PDF, output a yes, or no or a
+confidence score.
 
