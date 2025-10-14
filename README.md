@@ -60,3 +60,23 @@ eval count:           41 token(s)
 eval duration:        9.096797295s
 eval rate:            4.51 tokens/s
 ```
+
+### Tag accuracy
+
+The tags are free form, but they could be mapped to some more formal system. An
+automatic system cannot research, where a photo was take, its provenience, and
+all the tiny details that require an agent in the world.
+
+* [Einführung in Erschließung und Metadaten](https://www.germanistik.uni-wuerzburg.de/fileadmin/_migrated/content_uploads/Skript-Erschliessung_und_Metadaten.pdf)
+
+## I2MD (image to metadata)
+
+Task: Take an image of the first pages of a book, structure the data, create structured metadata for human review.
+
+* [ ] create evaluation set (image, metadata) pairs, maybe 1000 books, across the year (new books will have metadata supplied)
+* [ ] evaluate off the shelf model
+* [ ] try to tweak the prompt
+* [ ] use a lora vision to text tuned model
+* [ ] run evaluations again
+
+
